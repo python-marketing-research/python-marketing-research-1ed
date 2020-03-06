@@ -1,32 +1,24 @@
-'''
+"""
 This module contains all function from Chapter 6 of Python for 
 Marketing Research and Analytics
-'''
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
 
 
-def plot_confidence_intervals(centers, conf_ints, zero_line=False):
-  '''Plot centers and confidence intervals'''
-  plt.figure(figsize=(8,4))
-  sort_index = np.argsort(centers.values)
-  centers = centers[sort_index]
-  conf_ints = conf_ints.iloc[sort_index]
-  plt.barh(y=range(len(centers)), left=conf_ints[0],
-           width=conf_ints[1]-conf_ints[0],
-           height=0.2, color='0.4')
-  plt.yticks(range(len(centers)), conf_ints.index)
-  plt.plot(centers, range(len(centers)), 'ro')
-  if zero_line:
-    plt.plot([0,0],[-.5, len(centers) - 0.5], 'gray',
-             linestyle='dashed')
-    plt.xlim((-.05, 1.1 * conf_ints.iloc[:,1].max()))
-  plt.ylim((-.5, len(centers) - 0.5))
-
 def ttest(a, b):
-  '''This function displays statistics on two groups, runs a t-test, and finds
-  the 95% confidence interval of the mean difference between groups'''
+  """This function displays statistics on two groups, runs a t-test, and finds
+  the 95% confidence interval of the mean difference between groups
+  
+  arguments:
+  a, b: numpy arrays of numeric type
+  
+  Prints the following:
+  * Mean and standard deviation of a and b
+  * Welch's t-test statistic testing the equality of means of a and b
+  * 95% confidence interval of the mean difference between a and b"""
   
   # Get means and standard deviation of each group
   mean_a = a.mean() 
@@ -56,4 +48,30 @@ def ttest(a, b):
         .format(stats.t.interval(alpha=0.95, df=dof,
                                  loc=mean_a - mean_b,
                                  scale=geometric_mean_sem)))
+
+
+def plot_confidence_intervals(centers, conf_ints, zero_line=False):
+  """Plot centers and confidence intervals
+  
+  arguments:
+  centers: Series containing center poitns (mean values)
+  conf_ints: Dataframe containing the lower bound in the 0th column and upper
+             bound in the 1st
+  zero_line: Boolean specifying whether to include a line at x=0 (optional,
+             default False)"""
+  
+  plt.figure(figsize=(8,4))
+  sort_index = np.argsort(centers.values)
+  centers = centers[sort_index]
+  conf_ints = conf_ints.iloc[sort_index]
+  plt.barh(y=range(len(centers)), left=conf_ints[0],
+           width=conf_ints[1]-conf_ints[0],
+           height=0.2, color='0.4')
+  plt.yticks(range(len(centers)), conf_ints.index)
+  plt.plot(centers, range(len(centers)), 'ro')
+  if zero_line:
+    plt.plot([0,0],[-.5, len(centers) - 0.5], 'gray',
+             linestyle='dashed')
+    plt.xlim((-.05, 1.1 * conf_ints.iloc[:,1].max()))
+  plt.ylim((-.5, len(centers) - 0.5))
 
