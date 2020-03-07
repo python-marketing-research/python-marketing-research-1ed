@@ -1,7 +1,8 @@
-'''
+"""
 This module contains all function from Chapter 10 of Python for 
 Marketing Research and Analytics
-'''
+"""
+
 from matplotlib import cm
 import matplotlib.pyplot as plt
 import numpy as np

@@ -1,7 +1,8 @@
-'''
+"""
 This module contains all function from Chapter 11 of Python for 
 Marketing Research and Analytics
-'''
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
