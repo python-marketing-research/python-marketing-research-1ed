@@ -2,7 +2,7 @@
 This package contains all of the data files, notebook files, and code modules the support the book
 
 ## Getting started
-We recommend using pip to install, allow the functions from the chapters to be imported
+We recommend using pip to install, allowing the functions from the chapters to be easily imported
 ```
 pip3 install python_marketing_research
 ```
