@@ -12,7 +12,7 @@ The chapter modules, which contain all the functions defined in each chapter, ar
 Once installed, the function for a given chapter can be imported:
 
 ```
-from python_marketing_research import chapter2
+from python_marketing_research_functions import chapter2
 
 adder = chapter2.Adder(3, 4)
 ````
