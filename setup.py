@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="test-pkg-python-marketing-research", # Replace with your own username
+    name="python_marketing_research", # Replace with your own username
     version="0.9",
     author="Jason Schwarz",
     author_email="python-marketing@gmail.com",
