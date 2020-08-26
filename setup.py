@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.9.3",
     author="Jason Schwarz",
     author_email="python-marketing@gmail.com",
-    description="A test of package for Python for Marketing Research and Analytis",
+    description="A package for Python for Marketing Research and Analytis",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/python-marketing-research/python-marketing-research-1ed",
