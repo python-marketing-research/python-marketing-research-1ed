@@ -68,5 +68,5 @@ def cluster_plot(data_df, labels):
   plt.legend()
   plt.title('First two components explain {}% of the variance'
             .format(round(100*p.explained_variance_ratio_[:2].sum())))
-  plt.xlabel('First principle component')
-  plt.ylabel('Second principle component')
+  plt.xlabel('First principal component')
+  plt.ylabel('Second principal component')
