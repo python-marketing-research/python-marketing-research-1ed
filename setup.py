@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="python_marketing_research", # Replace with your own username
-    version="0.9.3",
+    name="python_marketing_research",
+    version="0.9.4",
     author="Jason Schwarz",
     author_email="python-marketing@gmail.com",
     description="A package for Python for Marketing Research and Analytis",
