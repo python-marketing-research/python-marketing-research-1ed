@@ -152,7 +152,7 @@ jedi==0.16.0
 jieba==0.42.1
 Jinja2==2.11.1
 jmespath==0.9.5
-joblib==0.14.1
+joblib==1.2.0
 jpeg4py==0.1.4
 jsonschema==2.6.0
 jupyter==1.0.0
